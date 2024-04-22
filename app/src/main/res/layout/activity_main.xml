@@ -123,16 +123,16 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/button_banner"
-                    android:layout_width="80dp"
-                    android:layout_height="30dp"
-                    android:layout_marginEnd="16dp"
                     style="@android:style/Widget.Button"
+                    android:layout_width="80dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="16dp"
                     android:background="@drawable/purple_background"
-                    android:textColor="@color/white"
                     android:text="Buy now"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="@+id/textView_banner"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/textView_banner"/>
+                    app:layout_constraintTop_toTopOf="@+id/textView_banner" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -305,15 +305,25 @@
                 android:paddingEnd="12dp"/>
         </LinearLayout>
     </ScrollView>
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_height="110dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/appBar"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
             android:background="@drawable/edittext_background"
-            android:layout_margin="32dp"
             android:padding="4dp"
-            android:layout_height="60dp">
+            app:fabCradleMargin="8dp"
+            app:fabCradleRoundedCornerRadius="50dp"
+            app:fabCradleVerticalOffset="6dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -429,8 +439,18 @@
                         android:textAlignment="center" />
                 </LinearLayout>
             </LinearLayout>
-        </com.google.android.material.bottomnavigation.BottomNavigationView>
+        </com.google.android.material.bottomappbar.BottomAppBar>
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/qrcode"
+            app:backgroundTint="@color/purple_Dark"
+            app:layout_anchor="@id/appBar"
+            app:maxImageSize="30dp"
+            app:tint="@color/white">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
     <LinearLayout
         android:layout_width="match_parent"

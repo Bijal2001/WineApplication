@@ -6,9 +6,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.ScrollView;
 import android.widget.Toast;
+
+import com.example.wineapplication.constant.SQLCommand;
+import com.example.wineapplication.util.DBOperator;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -30,6 +36,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_home);
         }
+//  Logic to data read
+//        //implement SQL query and get cursor of resultset
+//        Cursor cursor = DBOperator.getInstance().execQuery(SQLCommand.QUERY_USER);
+//        TableView tableView = new TableView(this, cursor);
+//        //show data in tableview
+//        ScrollView scrollView = (ScrollView)this.findViewById(R.id.scrollView1);
+//        scrollView.addView(tableView);
     }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {

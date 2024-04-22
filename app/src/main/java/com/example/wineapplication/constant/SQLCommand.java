@@ -8,7 +8,7 @@ package com.example.wineapplication.constant;
 public abstract class SQLCommand
 {
     //query all students
-    public static String QUERY_STUDENT = "select stid, stname from Student";
+    public static String QUERY_USER = "select FirstName, LastName from UserMaster limit 1";
 }
 
 

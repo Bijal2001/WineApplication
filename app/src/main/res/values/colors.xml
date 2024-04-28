@@ -10,6 +10,7 @@
     <color name="colorPrimary">#FF4081</color>
     <color name="lavender">#5E2F72</color>
     <color name="wine">#722F37</color>
+    <color name="grey">#E0E0E0</color>
 
     <color name="purple_Dark">#521C98</color>
     <color name="purple_Light">#A421D2</color>
